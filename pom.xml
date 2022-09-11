@@ -4,7 +4,7 @@
 	<groupId>ch.sentric</groupId>
 	<artifactId>url-normalization</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<name>url-normalization</name>
 	<url>https://github.com/sentric/url-normalization</url>
 	<scm>
@@ -21,12 +21,12 @@
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
-			<version>3.2.1</version>
+			<version>3.2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
+			<version>3.11</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -42,8 +42,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -55,4 +55,28 @@
 			</plugin>
 		</plugins>
 	</build>
+
+        <distributionManagement>
+                <repository>
+                        <id>nexus-releases</id>
+                        <name>Releases</name>
+                        <url>http://nexus.engagingthings.ai:8081/repository/maven-releases/</url>
+                </repository>
+
+                <snapshotRepository>
+                        <id>nexus-snapshots</id>
+                        <name>Snapshot</name>
+                        <url>http://nexus.engagingthings.ai:8081/repository/maven-snapshots/</url>
+                </snapshotRepository>
+
+        <!-- Uncomment the following to deploy to JFrog -->
+        <!--
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>a0xym7uw6rn2z-artifactory-primary-0-snapshots</name>
+            <url>https://engagingthings.jfrog.io/artifactory/engagingthings</url>
+        </snapshotRepository>
+        -->
+        </distributionManagement>
+
 </project>
